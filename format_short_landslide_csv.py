@@ -11,9 +11,10 @@ landslide_df.drop('date', axis = 1, inplace = True)
 landslide_df = landslide_df.rename({'date_short':'date'}, axis = 1)
 landslide_df['date'] = pd.to_datetime(landslide_df["date"]).dt.strftime('%Y%m%d')
 print(landslide_df.head())
-landslide_df['lat'] = landslide_df['lat'].astype(float)
-landslide_df['lon'] = landslide_df['lon'].astype(float)
-#landslide_df['date'] = landslide_df['date'].astype(float)
+landslide_df = landslide_df.astype(float)
+#landslide_df['lat'] = landslide_df['lat'].astype(float)
+#landslide_df['lon'] = landslide_df['lon'].astype(float)
+#landslide_df['date'] = landslide_df['date'].astype(int)
 
 '''
 Function taken from 'geoffboeing.com'
@@ -33,7 +34,7 @@ def df_to_geojson(df, properties, lat='lat', lon='lon'):
 
 
 
-#geojson_landslide = df_to_geojson(landslide_df, properties = 'date')
+geojson_landslide = df_to_geojson(landslide_df, properties = 'date')
 
 
 features = landslide_df.apply(lambda row: Feature(geometry=Point((float(row['lon']), float(row['lat'])))),axis=1).tolist()
