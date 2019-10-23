@@ -7,7 +7,7 @@ import geojson
 
 landslide_df = pd.read_csv('short_landslide.csv')
 landslide_df = pd.DataFrame(landslide_df)
-landslide_df.drop('location_a', axis = 1, inplace = True)
+landslide_df.drop('gazeteer_distance', axis = 1, inplace = True)
 landslide_df.columns = ['date','lat','lon']
 landslide_df['date_short'] = landslide_df['date'].str.split(' ').str[0]
 landslide_df.drop('date', axis = 1, inplace = True)
@@ -15,10 +15,12 @@ landslide_df = landslide_df.rename({'date_short':'date'}, axis = 1)
 
 landslide_df = landslide_df.dropna(how='any',axis=0) # gets ride of rows with missing data 
 landslide_df['date'] = pd.to_datetime(landslide_df['date']).dt.strftime('%Y%m%d')
-
-
 landslide_df['lat'] = landslide_df['lat'].astype(float)
 landslide_df['lon'] = landslide_df['lon'].astype(float)
+
+
+
+
 
 
 def  data2geojson(df):

@@ -5,5 +5,12 @@ def read_geojson(geojson_file):
         gj = geojson.load(f)
         return gj 
 
-my_land = read_geojson('./landslides.geojson')
-print(my_land[0])
+my_land = read_geojson('./landslide.geojson')
+print(my_land['features'][0]['properties']['date'])
+exact_date = my_land['features'][0]['properties']['date']
+print(type(exact_date))
+
+print('length: {}'.format(len(my_land['features'])))
+
+
+#print(my_land[0])
