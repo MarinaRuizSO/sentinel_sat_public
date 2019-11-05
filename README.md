@@ -1,4 +1,4 @@
-Python code to automatically download data from the sentinelhub website from a .csv file.
+Python3 code to automatically download data from the sentinelhub website from a .csv file.
 
 
 1. `polygon_csv_to_pd_landslides.py`: Takes in a .csv file, sorts the useful columns and transforms into pandas dataframe and creates shorter .csv file.
