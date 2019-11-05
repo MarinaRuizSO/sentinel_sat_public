@@ -6,7 +6,6 @@ from datetime import date
 import sys
 import pandas as pd
 import geopandas as geopd
-import pickle
 import geojson
 import datetime
 from datetime import timedelta
