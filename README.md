@@ -7,5 +7,5 @@ Python code to automatically download data from the sentinelhub website from a .
 4. `unzip_files.py`: unzips downloaded data.
 
 
-Run each the files in the given order. Too access the SentinelHub website you will need to create an account. Include the username and password as strings in the designated space in the file `polygon_advanced_data_download_batch.py`.
+Run each of the files in the given order. Too access the SentinelHub website you will need to create an account. Include the username and password as strings in the designated space in the file `polygon_advanced_data_download_batch.py`.
  
