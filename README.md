@@ -8,4 +8,14 @@ Python3 code to automatically download data from the sentinelhub website from a 
 
 
 Run each of the files in the given order. To access the SentinelHub website you will need to create an account. Include the username and password as strings in the designated space in the file `polygon_advanced_data_download_batch.py`.
- 
+
+Libraries needed: 
+1. `matplotlib`
+2. `pandas` 
+3. `geopandas`
+4. `geojson`
+5. `sentinelsat`
+6. `datetime`
+7. `zipfile`
+8. `glob`
+9. `os`
